@@ -1,3 +1,4 @@
 require "nvchad.options"
 
--- add yours here!
+-- LSP configuration
+require("lspconfig").gopls.setup({})
