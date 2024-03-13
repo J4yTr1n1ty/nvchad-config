@@ -12,4 +12,7 @@ return {
       git = { enable = true },
     },
   },
+  {
+    "github/copilot.vim",
+  },
 }
