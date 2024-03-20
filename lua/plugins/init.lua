@@ -14,5 +14,10 @@ return {
   },
   {
     "github/copilot.vim",
+    lazy = false,
   },
+  {
+    "ThePrimeagen/vim-be-good",
+    lazy = false
+  }
 }
