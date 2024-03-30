@@ -29,4 +29,8 @@ return {
       require "configs.presence"
     end
   },
+  {
+    "rcarriga/nvim-notify",
+    lazy = false
+  }
 }
