@@ -34,3 +34,5 @@ require("lspconfig").omnisharp.setup({
   -- true
   analyze_open_documents_only = false,
 })
+
+require("typescript-tools").setup({})
