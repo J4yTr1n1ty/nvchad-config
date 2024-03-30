@@ -21,5 +21,12 @@ return {
   {
     "ThePrimeagen/vim-be-good",
     lazy = false
-  }
+  },
+  {
+    "jiriks74/presence.nvim",
+    event = "UIEnter",
+    config = function()
+      require "configs.presence"
+    end
+  },
 }
