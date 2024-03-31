@@ -32,5 +32,16 @@ return {
   {
     "rcarriga/nvim-notify",
     lazy = false
+  },
+  {
+    "lewis6991/gitsigns.nvim",
+    lazy = false,
+    config = function ()
+      require("configs.gitsigns")
+    end
+  },
+  {
+    "tpope/vim-fugitive",
+    lazy = false
   }
 }

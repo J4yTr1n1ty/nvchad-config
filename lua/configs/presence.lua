@@ -4,7 +4,7 @@ local options = {
   main_image          = "file",
   log_level           = "debug",
   debounce_timeout    = 10,
-  enable_line_number  = false,
+  enable_line_number  = true,
   buttons             = false,
   show_time           = true,
   -- Rich Presence text options
