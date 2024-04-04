@@ -5,7 +5,15 @@ return {
       require "configs.conform"
     end,
   },
-
+  {
+    "OmniSharp/omnisharp-vim",
+    lazy = false
+  },
+  {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  },
   {
     "nvim-tree/nvim-tree.lua",
     opts = {

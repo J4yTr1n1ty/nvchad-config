@@ -1,10 +1,10 @@
 require("gitsigns").setup({
   signs = {
-    add = { text = "+" },
-    change = { text = "~" },
-    delete = { text = "_" },
-    topdelete = { text = "‾" },
-    changedelete = { text = "~" }
+    add = { text = "+", guibg = "NONE" },
+    change = { text = "~", guibg = "NONE" },
+    delete = { text = "_", guibg = "NONE" },
+    topdelete = { text = "‾", guibg = "NONE" },
+    changedelete = { text = "~", guibg = "NONE" }
   }
 })
 

@@ -4,7 +4,7 @@ require "nvchad.options"
 require("lspconfig").gopls.setup({})
 require("lspconfig").angularls.setup({})
 require("lspconfig").omnisharp.setup({
-  cmd = { "dotnet", "/home/jay/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll" },
+  cmd = { "dotnet", vim.fn.stdpath "data" .. "/mason/packages/omnisharp/libexec/OmniSharp.dll" },
   -- Enables support for reading code style, naming convention and analyzer
   -- settings from .editorconfig.
   enable_editorconfig_support = true,
@@ -14,7 +14,7 @@ require("lspconfig").omnisharp.setup({
   -- for projects that are relevant to code that is being edited. With this
   -- setting enabled OmniSharp may load fewer projects and may thus display
   -- incomplete reference lists for symbols.
-  enable_ms_build_load_projects_on_demand = false,
+  enable_ms_build_load_projects_on_demand = true,
   -- Enables support for roslyn analyzers, code fixes and rulesets.
   enable_roslyn_analyzers = false,
   -- Specifies whether 'using' directives should be grouped and sorted during
@@ -33,6 +33,9 @@ require("lspconfig").omnisharp.setup({
   -- Only run analyzers against open files when 'enableRoslynAnalyzers' is
   -- true
   analyze_open_documents_only = false,
+  root_dir = function ()
+    return vim.loop.cwd() -- current working directory
+  end
 })
 
 require("typescript-tools").setup({})
