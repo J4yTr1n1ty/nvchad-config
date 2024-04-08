@@ -38,4 +38,6 @@ require("lspconfig").omnisharp.setup({
   end
 })
 
+require("lspconfig").clangd.setup({})
+
 require("typescript-tools").setup({})

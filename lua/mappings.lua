@@ -30,3 +30,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     mapLsp('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinitions')
   end
 })
+
+-- Debugger
+vim.keymap.set('n', '<leader>db', "<cmd> DapToggleBreakpoint <CR>", { desc = '[D]ebugger: Toggle [B]reakpoint'})
+vim.keymap.set('n', '<leader>dc', "<cmd> DapContinue <CR>", { desc = '[D]ebugger: Start or [C]ontinue'})
