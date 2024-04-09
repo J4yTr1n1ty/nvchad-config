@@ -13,6 +13,14 @@ return {
     "mfussenegger/nvim-dap",
   },
   {
+    "leoluz/nvim-dap-go",
+    ft = "go",
+    dependencies = "mfussenegger/nvim-dap",
+    config = function (_, opts)
+      require("dap-go").setup(opts)
+    end
+  },
+  {
     "rcarriga/nvim-dap-ui",
     dependencies = {
       "mfussenegger/nvim-dap",
@@ -107,5 +115,15 @@ return {
   {
     "tpope/vim-fugitive",
     lazy = false
+  },
+  {
+    "olexsmir/gopher.nvim",
+    ft = "go",
+    config = function (_, opts)
+      require("gopher").setup(opts)
+    end,
+    build = function ()
+      vim.cmd [[silent! GoInstallDeps]]
+    end
   }
 }
