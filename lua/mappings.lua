@@ -30,6 +30,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
     mapLsp('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinitions')
 
     mapLsp('<leader>lh', vim.lsp.buf.hover, '[H]over')
+
+    mapLsp('<leader>lr', vim.lsp.buf.rename, '[R]ename')
+
+    mapLsp('<leader>lF', vim.lsp.buf.format, '[F]ormat')
   end
 })
 
