@@ -56,7 +56,10 @@ return {
           'omnisharp',
           'clangd',
           'clang-format',
-          'codelldb'
+          'codelldb',
+          'gopls',
+          'rust-analyzer',
+          'angular-language-server',
         }
     }
   },
@@ -77,7 +80,7 @@ return {
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     opts = {},
-    lazy = false
+    event = 'VeryLazy'
   },
   {
     "ThePrimeagen/vim-be-good",
