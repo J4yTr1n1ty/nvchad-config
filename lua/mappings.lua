@@ -28,6 +28,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     mapLsp('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementations')
 
     mapLsp('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinitions')
+
+    mapLsp('<leader>h', vim.lsp.buf.hover, '[H]over')
   end
 })
 
