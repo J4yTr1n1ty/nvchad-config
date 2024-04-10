@@ -68,6 +68,7 @@ return {
           'gopls',
           'rust-analyzer',
           'angular-language-server',
+          'pyright'
         }
     }
   },

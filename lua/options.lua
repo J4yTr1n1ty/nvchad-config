@@ -39,5 +39,6 @@ require("lspconfig").omnisharp.setup({
 })
 
 require("lspconfig").clangd.setup({})
+require("lspconfig").pyright.setup({})
 
 require("typescript-tools").setup({})
