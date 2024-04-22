@@ -43,7 +43,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
 vim.keymap.set('n', '<leader>db', "<cmd> DapToggleBreakpoint <CR>", { desc = '[D]ebugger: Toggle [B]reakpoint'})
 vim.keymap.set('n', '<leader>dc', "<cmd> DapContinue <CR>", { desc = '[D]ebugger: Start or [C]ontinue'})
 vim.keymap.set('n', '<leader>dus', function ()
-  local widgets = require('dap.ui.widgets')
-  local sidebar = widgets.sidebar(widgets.scopes)
-  sidebar.open();
+  -- local widgets = require('dap.ui.widgets')
+  -- local sidebar = widgets.sidebar(widgets.scopes)
+  -- sidebar.open();
+  require("dapui").toggle();
 end, { desc = '[D]ebugger: Open [U]I [S]idebar'})
