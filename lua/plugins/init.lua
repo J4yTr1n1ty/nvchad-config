@@ -5,6 +5,21 @@ return {
       require "configs.conform"
     end,
   },
+  -- {
+  --   'goolord/alpha-nvim',
+  --   config = function ()
+  --       require'alpha'.setup(require'alpha.themes.dashboard'.config)
+  --   end,
+  --   event = 'VimEnter'
+  -- },
+  {
+    'nvimdev/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      require "configs.dashboard"
+    end,
+    dependencies = { {'nvim-tree/nvim-web-devicons'}}
+  },
   {
     "OmniSharp/omnisharp-vim",
     lazy = false
