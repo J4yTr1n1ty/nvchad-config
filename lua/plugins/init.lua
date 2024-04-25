@@ -61,14 +61,16 @@ return {
     "williamboman/mason.nvim",
     opts = {
         ensure_installed = {
-          'omnisharp',
+          -- 'omnisharp',
           'clangd',
           'clang-format',
           'codelldb',
           'gopls',
           'rust-analyzer',
           'angular-language-server',
-          'pyright'
+          'pyright',
+          'asm-lsp',
+          'autotools-language-server'
         }
     }
   },
