@@ -13,6 +13,13 @@ return {
   --   event = 'VimEnter'
   -- },
   {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
+  { 'wakatime/vim-wakatime', lazy = false },
+  {
     'nvimdev/dashboard-nvim',
     event = 'VimEnter',
     config = function()
@@ -92,9 +99,17 @@ return {
           'angular-language-server',
           'pyright',
           'asm-lsp',
-          'autotools-language-server'
+          'autotools-language-server',
+          'marksman',
         }
     }
+  },
+  { 'rust-lang/rust.vim', event = "VeryLazy" },
+  {
+      'mrcjkb/rustaceanvim',
+      version = '^3',
+      event = "VeryLazy",
+      ft = { 'rust' },
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
