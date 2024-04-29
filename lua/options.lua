@@ -1,5 +1,6 @@
 require "nvchad.options"
 local lspconfig = require("lspconfig");
+local util = require "lspconfig/util";
 
 -- LSP configuration
 lspconfig.gopls.setup({})
@@ -43,6 +44,17 @@ lspconfig.clangd.setup({})
 lspconfig.pyright.setup({})
 lspconfig.autotools_ls.setup({})
 lspconfig.asm_lsp.setup({})
+lspconfig.rust_analyzer.setup({
+  filetypes = {"rust"},
+  root_dir = util.root_pattern("Cargo.toml"),
+  settings = {
+    ['rust-analyzer'] = {
+      cargo = {
+        allFeatures = true
+      }
+    }
+  }
+})
 
 require("typescript-tools").setup({})
 
