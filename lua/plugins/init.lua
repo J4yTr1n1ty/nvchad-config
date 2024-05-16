@@ -12,6 +12,7 @@ return {
   --   end,
   --   event = 'VimEnter'
   -- },
+  { "xiyaowong/transparent.nvim", lazy = false },
   {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
@@ -29,7 +30,7 @@ return {
   },
   {
     "OmniSharp/omnisharp-vim",
-    lazy = false
+    ft = { "csharp" }
   },
   {
     "rust-lang/rust.vim",
@@ -90,7 +91,7 @@ return {
     "williamboman/mason.nvim",
     opts = {
         ensure_installed = {
-          -- 'omnisharp',
+          'omnisharp',
           'clangd',
           'clang-format',
           'codelldb',
