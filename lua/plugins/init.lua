@@ -5,13 +5,13 @@ return {
       require "configs.conform"
     end,
   },
-  -- {
-  --   'goolord/alpha-nvim',
-  --   config = function ()
-  --       require'alpha'.setup(require'alpha.themes.dashboard'.config)
-  --   end,
-  --   event = 'VimEnter'
-  -- },
+  {
+      'IogaMaster/neocord',
+      event = "VeryLazy",
+      config = function ()
+        require "configs.neocord"
+      end
+  },
   { "xiyaowong/transparent.nvim", lazy = false },
   {
     "iamcco/markdown-preview.nvim",
@@ -134,13 +134,6 @@ return {
   {
     "ThePrimeagen/vim-be-good",
     lazy = false
-  },
-  {
-    "jiriks74/presence.nvim",
-    event = "UIEnter",
-    config = function()
-      require "configs.presence"
-    end
   },
   {
     "rcarriga/nvim-notify",
