@@ -6,11 +6,12 @@ return {
     end,
   },
   {
-      'IogaMaster/neocord',
-      event = "VeryLazy",
-      config = function ()
-        require "configs.neocord"
-      end
+    'vyfor/cord.nvim',
+    build = './build',
+    event = 'VeryLazy',
+    config = function ()
+      require "configs.cord"
+    end
   },
   { "xiyaowong/transparent.nvim", lazy = false },
   {
