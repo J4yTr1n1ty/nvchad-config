@@ -22,6 +22,10 @@ return {
   },
   { 'wakatime/vim-wakatime', lazy = false },
   {
+    'Exafunction/codeium.vim',
+    event = 'BufEnter'
+  },
+  {
     'nvimdev/dashboard-nvim',
     event = 'VimEnter',
     config = function()
