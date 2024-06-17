@@ -60,3 +60,13 @@ vim.keymap.set({"i", "s"}, "<C-E>", function()
 		ls.change_choice(1)
 	end
 end, {silent = true})
+
+-- Cargo.nvim
+local crates = require("crates")
+
+vim.keymap.set("n", "<leader>ct", crates.toggle, { desc = '[C]rates: [T]oggle UI', silent = true })
+vim.keymap.set("n", "<leader>cr", crates.reload, { desc = '[C]rates: [R]eload', silent = true })
+
+vim.keymap.set("n", "<leader>cv", crates.show_versions_popup, { desc = '[C]rates: [V]ersions Popup', silent = true })
+vim.keymap.set("n", "<leader>cf", crates.show_features_popup, { desc = '[C]rates: [F]eatures Popup', silent = true })
+vim.keymap.set("n", "<leader>cd", crates.show_dependencies_popup, { desc = '[C]rates: [D]ependencies Popup', silent = true })
