@@ -9,7 +9,7 @@ return {
     'vyfor/cord.nvim',
     build = './build',
     event = 'VeryLazy',
-    config = function ()
+    config = function()
       require "configs.cord"
     end
   },
@@ -18,7 +18,7 @@ return {
     'saecki/crates.nvim',
     event = { "BufRead Cargo.toml" },
     config = function()
-        require('crates').setup()
+      require('crates').setup()
     end,
   },
   {
@@ -27,7 +27,7 @@ return {
     ft = { "markdown" },
     build = function() vim.fn["mkdp#util#install"]() end,
   },
-  { 'wakatime/vim-wakatime', lazy = false },
+  { 'wakatime/vim-wakatime',      lazy = false },
   {
     'Exafunction/codeium.vim',
     event = 'BufEnter'
@@ -38,7 +38,7 @@ return {
     config = function()
       require "configs.dashboard"
     end,
-    dependencies = { {'nvim-tree/nvim-web-devicons'}}
+    dependencies = { { 'nvim-tree/nvim-web-devicons' } }
   },
   {
     "OmniSharp/omnisharp-vim",
@@ -47,7 +47,7 @@ return {
   {
     "rust-lang/rust.vim",
     ft = "rust",
-    init = function ()
+    init = function()
       vim.g.rustfmt_autosave = 1
     end
   },
@@ -58,7 +58,7 @@ return {
     "leoluz/nvim-dap-go",
     ft = "go",
     dependencies = "mfussenegger/nvim-dap",
-    config = function (_, opts)
+    config = function(_, opts)
       require("dap-go").setup(opts)
     end
   },
@@ -69,17 +69,17 @@ return {
       "nvim-neotest/nvim-nio"
     },
     event = "VeryLazy",
-    config = function ()
+    config = function()
       local dap = require("dap")
       local dapui = require("dapui")
       dapui.setup()
-      dap.listeners.after.event_initialized["dapui_config"] = function ()
+      dap.listeners.after.event_initialized["dapui_config"] = function()
         dapui.open()
       end
-      dap.listeners.before.event_terminated["dapui_config"] = function ()
+      dap.listeners.before.event_terminated["dapui_config"] = function()
         dapui.close()
       end
-      dap.listeners.before.event_exited["dapui_config"] = function ()
+      dap.listeners.before.event_exited["dapui_config"] = function()
         dapui.close()
       end
     end
@@ -102,32 +102,32 @@ return {
   {
     "williamboman/mason.nvim",
     opts = {
-        ensure_installed = {
-          'omnisharp',
-          'clangd',
-          'clang-format',
-          'codelldb',
-          'gopls',
-          'rust-analyzer',
-          'angular-language-server',
-          'pyright',
-          'asm-lsp',
-          'autotools-language-server',
-          'marksman',
-        }
+      ensure_installed = {
+        'omnisharp',
+        'clangd',
+        'clang-format',
+        'codelldb',
+        'gopls',
+        'rust-analyzer',
+        'angular-language-server',
+        'pyright',
+        'asm-lsp',
+        'autotools-language-server',
+        'marksman',
+      }
     }
   },
   { 'rust-lang/rust.vim', event = "VeryLazy" },
   {
-      'mrcjkb/rustaceanvim',
-      version = '^3',
-      event = "VeryLazy",
-      ft = { 'rust' },
+    'mrcjkb/rustaceanvim',
+    version = '^3',
+    event = "VeryLazy",
+    ft = { 'rust' },
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
     event = "VeryLazy",
-    opts = function ()
+    opts = function()
       return require("configs.null-ls")
     end
   },
@@ -154,7 +154,7 @@ return {
   {
     "lewis6991/gitsigns.nvim",
     lazy = false,
-    config = function ()
+    config = function()
       require("configs.gitsigns")
     end
   },
