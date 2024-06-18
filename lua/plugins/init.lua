@@ -6,6 +6,10 @@ return {
     end,
   },
   {
+    'mg979/vim-visual-multi',
+    event = 'VeryLazy',
+  },
+  {
     'vyfor/cord.nvim',
     build = './build',
     event = 'VeryLazy',
