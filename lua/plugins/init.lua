@@ -112,6 +112,7 @@ return {
         'clang-format',
         'codelldb',
         'gopls',
+        'htmx-lsp',
         'rust-analyzer',
         'angular-language-server',
         'pyright',

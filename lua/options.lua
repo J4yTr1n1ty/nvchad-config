@@ -56,6 +56,7 @@ lspconfig.rust_analyzer.setup({
   }
 })
 lspconfig.marksman.setup({})
+lspconfig.htmx.setup{}
 
 require("typescript-tools").setup({})
 
