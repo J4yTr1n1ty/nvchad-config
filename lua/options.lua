@@ -3,7 +3,9 @@ local lspconfig = require("lspconfig");
 local util = require "lspconfig/util";
 
 -- LSP configuration
-lspconfig.gopls.setup({})
+lspconfig.gopls.setup({
+  filetypes = { "go", "gomod", "templ" },
+})
 lspconfig.angularls.setup({})
 lspconfig.omnisharp.setup({
   cmd = { "dotnet", vim.fn.stdpath "data" .. "/mason/packages/omnisharp/libexec/OmniSharp.dll" },
@@ -35,7 +37,7 @@ lspconfig.omnisharp.setup({
   -- Only run analyzers against open files when 'enableRoslynAnalyzers' is
   -- true
   analyze_open_documents_only = false,
-  root_dir = function ()
+  root_dir = function()
     return vim.loop.cwd() -- current working directory
   end
 })
@@ -45,7 +47,7 @@ lspconfig.pyright.setup({})
 lspconfig.autotools_ls.setup({})
 lspconfig.asm_lsp.setup({})
 lspconfig.rust_analyzer.setup({
-  filetypes = {"rust"},
+  filetypes = { "rust" },
   root_dir = util.root_pattern("Cargo.toml"),
   settings = {
     ['rust-analyzer'] = {
@@ -56,7 +58,20 @@ lspconfig.rust_analyzer.setup({
   }
 })
 lspconfig.marksman.setup({})
-lspconfig.htmx.setup{}
+lspconfig.templ.setup({
+  filetypes = { "html", "templ" },
+})
+lspconfig.html.setup({
+  filetypes = { "html", "templ" },
+})
+lspconfig.htmx.setup({
+  filetypes = { "html", "templ" },
+})
+lspconfig.tailwindcss.setup({
+  filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+  init_options = { userLanguages = { templ = "html" } },
+})
+lspconfig.htmx.setup {}
 
 require("typescript-tools").setup({})
 
