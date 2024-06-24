@@ -113,6 +113,7 @@ return {
         'templ',
         'html-lsp',
         'tailwindcss-language-server',
+        'typescript-language-server',
         'css-lsp',
         'lua-language-server',
         'codelldb',
