@@ -2,6 +2,17 @@ require "nvchad.options"
 local lspconfig = require("lspconfig");
 local util = require "lspconfig/util";
 
+local notify = require("notify")
+notify.setup({
+  timeout = 3000,
+  render = "minimal",
+  stages = "slide",
+  on_open = function(win)
+    vim.api.nvim_win_set_config(win, { border = "single" })
+  end,
+})
+vim.notify = notify
+
 -- LSP configuration
 lspconfig.lua_ls.setup({
   settings = {
@@ -67,7 +78,9 @@ lspconfig.omnisharp.setup({
 lspconfig.clangd.setup({})
 lspconfig.pyright.setup({})
 lspconfig.autotools_ls.setup({})
-lspconfig.asm_lsp.setup({})
+lspconfig.asm_lsp.setup({
+  filetypes = { "asm", "s", "S", "asmx", "nasm" },
+})
 lspconfig.rust_analyzer.setup({
   filetypes = { "rust" },
   root_dir = util.root_pattern("Cargo.toml"),
@@ -86,9 +99,9 @@ lspconfig.templ.setup({
 lspconfig.html.setup({
   filetypes = { "html", "templ" },
 })
-lspconfig.htmx.setup({
-  filetypes = { "html", "templ" },
-})
+-- lspconfig.htmx.setup({
+--   filetypes = { "html", "templ" },
+-- })
 lspconfig.tailwindcss.setup({
   filetypes = { "templ", "javascript", "typescript", "html" },
   init_options = { userLanguages = { templ = "html" } },

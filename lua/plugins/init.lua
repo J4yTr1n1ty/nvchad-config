@@ -31,7 +31,10 @@ return {
     ft = { "markdown" },
     build = function() vim.fn["mkdp#util#install"]() end,
   },
-  { 'wakatime/vim-wakatime',      lazy = false },
+  {
+    'wakatime/vim-wakatime',
+    lazy = false
+  },
   {
     'Exafunction/codeium.vim',
     event = 'BufEnter'
@@ -108,6 +111,7 @@ return {
     opts = {
       ensure_installed = {
         'omnisharp',
+        'csharpier',
         'clangd',
         'clang-format',
         'templ',
@@ -128,7 +132,10 @@ return {
       }
     }
   },
-  { 'rust-lang/rust.vim', event = "VeryLazy" },
+  {
+    'rust-lang/rust.vim',
+    event = "VeryLazy"
+  },
   {
     'mrcjkb/rustaceanvim',
     version = '^3',
@@ -150,7 +157,10 @@ return {
   },
   {
     "pmizio/typescript-tools.nvim",
-    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "neovim/nvim-lspconfig"
+    },
     opts = {},
     event = 'VeryLazy'
   },
