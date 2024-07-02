@@ -129,6 +129,7 @@ return {
         'asm-lsp',
         'autotools-language-server',
         'marksman',
+        'protolint'
       }
     }
   },
