@@ -6,6 +6,23 @@ local opts = {
 		null_ls.builtins.formatting.clang_format.with({
 			filetypes = { "c", "cpp", "h", "hpp" },
 		}),
+    null_ls.builtins.formatting.prettier.with({
+      filetypes = {
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "vue",
+        "css",
+        "scss",
+        "less",
+        "html",
+        "json",
+        "yaml",
+        "markdown",
+        "graphql",
+      },
+    }),
 		null_ls.builtins.formatting.gofumpt,
 		null_ls.builtins.formatting.goimports_reviser,
 		null_ls.builtins.formatting.csharpier,
