@@ -13,6 +13,9 @@ notify.setup({
 })
 vim.notify = notify
 
+-- NvimTree on the right
+require("configs.nvim-tree")
+
 -- LSP configuration
 lspconfig.lua_ls.setup({
   settings = {
