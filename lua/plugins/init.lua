@@ -6,6 +6,14 @@ return {
     end,
   },
   {
+    "vuki656/package-info.nvim",
+    dependencies = { "MunifTanjim/nui.nvim" },
+    event = "VeryLazy",
+    config = function()
+      require("package-info").setup()
+    end
+  },
+  {
     'mg979/vim-visual-multi',
     event = 'VeryLazy',
   },
