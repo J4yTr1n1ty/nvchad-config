@@ -25,7 +25,28 @@ return {
       require "configs.cord"
     end
   },
+  {
+      "tris203/precognition.nvim",
+      event = "VeryLazy",
+      opts = {
+        startVisible = false
+      }
+  },
+  -- {
+  --    "m4xshen/hardtime.nvim",
+  --    dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+  --    event = "VeryLazy",
+  --    opts = {},
+  --    config = function()
+  --      require("hardtime").setup()
+  --    end
+  -- },
   { "xiyaowong/transparent.nvim", lazy = false },
+  {
+      "aserowy/tmux.nvim",
+      event = "VeryLazy",
+      config = function() return require("tmux").setup() end
+  },
   {
     'saecki/crates.nvim',
     event = { "BufRead Cargo.toml" },
@@ -38,6 +59,26 @@ return {
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     ft = { "markdown" },
     build = function() vim.fn["mkdp#util#install"]() end,
+  },
+  {
+      "OXY2DEV/markview.nvim",
+      ft = "markdown",
+
+      dependencies = {
+          -- You may not need this if you don't lazy load
+          -- Or if the parsers are in your $RUNTIMEPATH
+          "nvim-treesitter/nvim-treesitter",
+
+          "nvim-tree/nvim-web-devicons"
+      },
+  },
+  {
+      "OXY2DEV/helpview.nvim",
+      lazy = false,
+
+      dependencies = {
+          "nvim-treesitter/nvim-treesitter"
+      }
   },
   {
     'wakatime/vim-wakatime',
