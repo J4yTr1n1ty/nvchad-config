@@ -116,3 +116,23 @@ require("typescript-tools").setup({})
 
 -- Snippets
 require("luasnip.loaders.from_vscode").lazy_load()
+
+
+-- mason tool installer notifications
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'MasonToolsStartingInstall',
+  callback = function()
+    vim.schedule(function()
+      require('notify')('Mason Tools starting install', 'info', { title = 'Mason' })
+    end)
+  end,
+})
+
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'MasonToolsUpdateCompleted',
+  callback = function()
+    vim.schedule(function()
+      require('notify')('Mason tools update complete', 'info', { title = 'Mason' })
+    end)
+  end,
+})

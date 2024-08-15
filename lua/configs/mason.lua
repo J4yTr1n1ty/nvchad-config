@@ -20,5 +20,8 @@ return {
       'autotools-language-server',
       'marksman',
       'protolint'
-    }
+    },
+    auto_update = true,
+    run_on_start = true,
+    debounce_hours = 2,
 }

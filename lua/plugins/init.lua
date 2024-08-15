@@ -156,10 +156,11 @@ return {
     "neovim/nvim-lspconfig",
   },
   {
-    "williamboman/mason.nvim",
-    opts = {
-      require("configs.mason")
-    }
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    event = "VeryLazy",
+    config = function ()
+      require('mason-tool-installer').setup(require("configs.mason"))
+    end
   },
   {
     "nvim-treesitter/nvim-treesitter",
