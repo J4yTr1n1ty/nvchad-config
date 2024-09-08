@@ -109,7 +109,7 @@ lspconfig.tailwindcss.setup({
   filetypes = { "templ", "javascript", "typescript", "html" },
   init_options = { userLanguages = { templ = "html" } },
 })
-lspconfig.tsserver.setup({})
+lspconfig.ts_ls.setup({})
 lspconfig.htmx.setup {}
 
 require("typescript-tools").setup({})
