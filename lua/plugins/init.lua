@@ -70,11 +70,6 @@ return {
   -- },
   { "xiyaowong/transparent.nvim", lazy = false },
   {
-      "aserowy/tmux.nvim",
-      event = "VeryLazy",
-      config = function() return require("tmux").setup() end
-  },
-  {
     'saecki/crates.nvim',
     event = { "BufRead Cargo.toml" },
     config = function()
