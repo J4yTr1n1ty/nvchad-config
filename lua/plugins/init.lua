@@ -6,6 +6,10 @@ return {
     end,
   },
   {
+    "mfussenegger/nvim-ansible",
+    event = "VeryLazy",
+  },
+  {
     "vuki656/package-info.nvim",
     dependencies = { "MunifTanjim/nui.nvim" },
     event = "VeryLazy",

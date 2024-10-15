@@ -1,5 +1,7 @@
 return {
     ensure_installed = {
+      'ansible-language-server',
+      'ansible-lint',
       'omnisharp',
       'csharpier',
       'clangd',
