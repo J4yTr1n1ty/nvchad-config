@@ -99,3 +99,6 @@ lspconfig.htmx.setup {}
 lspconfig.ansiblels.setup({})
 
 require("typescript-tools").setup({})
+
+-- I hate that I am doing this
+lspconfig.jdtls.setup({})

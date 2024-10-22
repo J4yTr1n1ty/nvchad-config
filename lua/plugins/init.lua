@@ -167,6 +167,15 @@ return {
     end
   },
   {
+			'williamboman/mason.nvim',
+			opts = {
+				registries = {
+					'github:nvim-java/mason-registry',
+					'github:mason-org/mason-registry',
+				},
+			},
+		},
+  {
     "jay-babu/mason-nvim-dap.nvim",
     event = "VeryLazy",
     dependencies = {
@@ -193,6 +202,13 @@ return {
     opts = {
       require("configs.treesitter")
     },
+  },
+  {
+    "nvim-java/nvim-java",
+    event = "VeryLazy",
+    config = function()
+      require("java").setup()
+    end
   },
   {
     'rust-lang/rust.vim',
