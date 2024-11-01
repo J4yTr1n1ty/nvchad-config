@@ -258,10 +258,6 @@ return {
     }
   },
   {
-    "rcarriga/nvim-notify",
-    lazy = false
-  },
-  {
     "lewis6991/gitsigns.nvim",
     lazy = false,
     config = function()
