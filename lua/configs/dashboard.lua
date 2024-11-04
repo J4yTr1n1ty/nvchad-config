@@ -7,7 +7,7 @@ local db = require("dashboard")
        enable = true,
       },
       shortcut = {
-        { desc = '󰊳 Update', group = '@property', action = 'Lazy update | MasonInstallAll', key = 'u' },
+        { desc = '󰊳 Update', group = '@property', action = 'Lazy update | MasonToolsInstallSync', key = 'u' },
         {
           icon = ' ',
           icon_hl = '@variable',
