@@ -25,7 +25,9 @@ return {
       'asm-lsp',
       'autotools-language-server',
       'marksman',
-      'protolint'
+      'protolint',
+      'dockerfile-language-server',
+      'docker-compose-language-service',
     },
     auto_update = true,
     run_on_start = true,

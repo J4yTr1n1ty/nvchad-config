@@ -1,8 +1,33 @@
 local lspconfig = require("lspconfig");
 local util = require "lspconfig/util";
+local nvlsp = require "nvchad.configs.lspconfig"
+
+nvlsp.defaults() -- loads nvchad's defaults
+
+-- Default Settings
+
+local defaultservers = {
+  "angularls",
+  "clangd",
+  "pyright",
+  "autotools_ls",
+  "dockerls",
+  "docker_compose_language_service",
+}
+
+for _, lsp in ipairs(defaultservers) do
+  lspconfig[lsp].setup {
+    on_attach = nvlsp.on_attach,
+    capabilities = nvlsp.capabilities,
+    on_init = nvlsp.on_init,
+  }
+end
 
 -- LSP configuration
 lspconfig.lua_ls.setup({
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  on_init = nvlsp.on_init,
   settings = {
     Lua = {
       runtime = {
@@ -25,10 +50,15 @@ lspconfig.lua_ls.setup({
   },
 })
 lspconfig.gopls.setup({
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  on_init = nvlsp.on_init,
   filetypes = { "go", "gomod", "templ" },
 })
-lspconfig.angularls.setup({})
 lspconfig.omnisharp.setup({
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  on_init = nvlsp.on_init,
   cmd = { "dotnet", vim.fn.stdpath "data" .. "/mason/packages/omnisharp/libexec/OmniSharp.dll" },
   -- Enables support for reading code style, naming convention and analyzer
   -- settings from .editorconfig.
@@ -63,13 +93,16 @@ lspconfig.omnisharp.setup({
   end
 })
 
-lspconfig.clangd.setup({})
-lspconfig.pyright.setup({})
-lspconfig.autotools_ls.setup({})
 lspconfig.asm_lsp.setup({
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  on_init = nvlsp.on_init,
   filetypes = { "asm", "s", "S", "asmx", "nasm" },
 })
 lspconfig.rust_analyzer.setup({
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  on_init = nvlsp.on_init,
   filetypes = { "rust" },
   root_dir = util.root_pattern("Cargo.toml"),
   settings = {
@@ -80,25 +113,57 @@ lspconfig.rust_analyzer.setup({
     }
   }
 })
-lspconfig.marksman.setup({})
+lspconfig.marksman.setup({
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  on_init = nvlsp.on_init,
+})
 lspconfig.templ.setup({
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  on_init = nvlsp.on_init,
   filetypes = { "html", "templ" },
 })
 lspconfig.html.setup({
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  on_init = nvlsp.on_init,
   filetypes = { "html", "templ" },
 })
 -- lspconfig.htmx.setup({
+  -- on_attach = nvlsp.on_attach,
+  -- capabilities = nvlsp.capabilities,
+  -- on_init = nvlsp.on_init,
 --   filetypes = { "html", "templ" },
 -- })
 lspconfig.tailwindcss.setup({
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  on_init = nvlsp.on_init,
   filetypes = { "templ", "javascript", "typescript", "html" },
   init_options = { userLanguages = { templ = "html" } },
 })
-lspconfig.ts_ls.setup({})
-lspconfig.htmx.setup {}
-lspconfig.ansiblels.setup({})
+lspconfig.ts_ls.setup({
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  on_init = nvlsp.on_init,
+})
+lspconfig.htmx.setup {
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  on_init = nvlsp.on_init,
+}
+lspconfig.ansiblels.setup({
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  on_init = nvlsp.on_init,
+})
 
 require("typescript-tools").setup({})
 
 -- I hate that I am doing this
-lspconfig.jdtls.setup({})
+lspconfig.jdtls.setup({
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+  on_init = nvlsp.on_init,
+})
