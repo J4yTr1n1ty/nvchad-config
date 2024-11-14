@@ -99,6 +99,7 @@ local servers = {
   ts_ls = {},
   ansiblels = {},
   jdtls = {},
+  intelephense = {},
 }
 
 for name, opts in pairs(servers) do
