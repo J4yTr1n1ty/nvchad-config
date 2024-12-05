@@ -18,6 +18,10 @@ return {
     "typescript",
     "yaml",
     "toml",
+    "php",
+    "php_only",
+    "blade",
+    "markdown",
   },
 
   auto_install = true,

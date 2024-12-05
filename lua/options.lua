@@ -24,6 +24,12 @@ require("configs.lsp")
 -- Snippets
 require("luasnip.loaders.from_vscode").lazy_load()
 
+-- Filetypes --
+vim.filetype.add({
+  pattern = {
+    ['.*%.blade%.php'] = 'blade',
+  },
+})
 
 -- mason tool installer notifications
 vim.api.nvim_create_autocmd('User', {
