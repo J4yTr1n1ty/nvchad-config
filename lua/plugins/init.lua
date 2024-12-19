@@ -306,4 +306,8 @@ return {
     "tpope/vim-fugitive",
     lazy = false
   },
+  {
+    "tpope/vim-obsession",
+    lazy = false
+  }
 }
