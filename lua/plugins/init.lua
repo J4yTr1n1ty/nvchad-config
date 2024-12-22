@@ -68,7 +68,8 @@ return {
   },
   {
     'vyfor/cord.nvim',
-    build = './build',
+    branch = 'client-server',
+    build = ':Cord fetch',
     event = 'VeryLazy',
     config = function()
       require "configs.cord"
