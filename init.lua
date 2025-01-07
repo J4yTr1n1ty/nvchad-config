@@ -2,6 +2,7 @@ vim.g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
 vim.g.mapleader = " "
 vim.wo.relativenumber = true
 vim.opt.termguicolors = true
+vim.opt.scrolloff = 5
 
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
