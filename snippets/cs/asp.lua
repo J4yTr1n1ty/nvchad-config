@@ -9,6 +9,7 @@ local function get_controller_name()
     return filename:gsub("Controller%.cs$", "")
 end
 
+--- TODO: Get the namespace of the current file by looking at the closest .csproj file
 local function get_namespace()
     local filepath = vim.fn.expand("%:p:h")
     local project_root = vim.fn.getcwd()
@@ -28,17 +29,17 @@ return {
         t({"", "}"}),
     }),
     s("asyncget", {
-      i(1, "public"),
-      t(" async Task<"),
-      i(2, "T"),
-      t(">"),
-      t(" "),
-      i(3, "Get"),
-      t("("),
-      i(5),
-      t(")"),
-      t({ " {", "    " }),
-      i(4),
-      t({ "", "}" }),
+        i(1, "public"),
+        t(" async Task<"),
+        i(2, "T"),
+        t(">"),
+        t(" "),
+        i(3, "Get"),
+        t("("),
+        i(5),
+        t(")"),
+        t({ " {", "    " }),
+        i(4),
+        t({ "", "}" }),
     }),
 }
