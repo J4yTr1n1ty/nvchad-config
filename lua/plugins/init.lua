@@ -6,6 +6,10 @@ return {
     end,
   },
   {
+    'mistweaverco/kulala.nvim',
+    opts = {}
+  },
+  {
     "mfussenegger/nvim-ansible",
     event = "VeryLazy",
   },
