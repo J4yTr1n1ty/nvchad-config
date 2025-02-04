@@ -7,4 +7,8 @@ M.ui = {
   },
 }
 
+M.lsp = {
+ signature = true,
+}
+
 return M

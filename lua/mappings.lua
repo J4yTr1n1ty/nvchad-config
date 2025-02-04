@@ -71,5 +71,8 @@ vim.keymap.set("n", "<leader>cv", crates.show_versions_popup, { desc = '[C]rates
 vim.keymap.set("n", "<leader>cf", crates.show_features_popup, { desc = '[C]rates: [F]eatures Popup', silent = true })
 vim.keymap.set("n", "<leader>cd", crates.show_dependencies_popup, { desc = '[C]rates: [D]ependencies Popup', silent = true })
 
+-- Kulala
+vim.keymap.set("n", "<leader>kr", require('kulala').run, { desc = '[K]ulala: [R]un', silent = true })
+
 -- Todo Comments
 vim.keymap.set("n", "<leader>tt", require("todo-comments.search").setqflist, { desc = '[T]odo: [T]oggle', silent = true })
