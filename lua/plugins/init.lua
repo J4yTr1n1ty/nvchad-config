@@ -72,7 +72,6 @@ return {
   },
   {
     'vyfor/cord.nvim',
-    branch = 'client-server',
     build = ':Cord fetch',
     event = 'VeryLazy',
     config = function()
