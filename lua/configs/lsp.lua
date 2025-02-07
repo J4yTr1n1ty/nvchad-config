@@ -100,6 +100,7 @@ local servers = {
   ansiblels = {},
   jdtls = {},
   intelephense = {},
+  astro = {},
 }
 
 for name, opts in pairs(servers) do

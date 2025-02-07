@@ -28,7 +28,8 @@ return {
       'protolint',
       'dockerfile-language-server',
       'docker-compose-language-service',
-      'intelephense'
+      'intelephense',
+      'astro-language-server'
     },
     auto_update = true,
     run_on_start = true,
