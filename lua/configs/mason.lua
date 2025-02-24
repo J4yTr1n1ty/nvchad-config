@@ -11,7 +11,6 @@ return {
       'html-lsp',
       'prettier',
       'tailwindcss-language-server',
-      'typescript-language-server',
       'css-lsp',
       'lua-language-server',
       'codelldb',

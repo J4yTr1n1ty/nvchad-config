@@ -96,7 +96,6 @@ local servers = {
     filetypes = { "templ", "javascript", "typescript", "html" },
     init_options = { userLanguages = { templ = "html" } },
   },
-  ts_ls = {},
   ansiblels = {},
   jdtls = {},
   intelephense = {},

@@ -6,6 +6,11 @@ return {
     end,
   },
   {
+    'alexghergh/nvim-tmux-navigation',
+    config = require('configs.nvim-tmux-navigation'),
+    event = 'VeryLazy'
+  },
+  {
     '3rd/image.nvim',
     event = 'VeryLazy',
     config = function()
